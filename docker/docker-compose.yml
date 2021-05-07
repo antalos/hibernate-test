@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  pgMaster:
+    restart: always
+    image: sameersbn/postgresql:9.6-4
+    environment:
+      - DEBUG=false
+      - DB_USER=dbuser
+      - DB_PASS=dbpass
+      - DB_NAME=mydb
+      - DB_UNACCENT=false
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./data-master:/var/lib/postgresql

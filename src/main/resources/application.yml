@@ -1,0 +1,23 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: PrivateAPI
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:15432/mydb
+    driverClassName: org.postgresql.Driver
+    username: dbuser
+    password: dbpass
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        generate_statistics: false
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
