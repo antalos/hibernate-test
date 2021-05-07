@@ -1,3 +1,5 @@
 .idea
 build
 docker/data-master
+.gradle
+out
